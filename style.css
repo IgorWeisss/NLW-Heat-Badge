@@ -1,25 +1,31 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
-html, body {
-  background-color: rgb(40, 39, 49);
+html, 
+body {
   --greyh1: hsl(240, 9%, 89%);
   --greya: hsla(240, 7%, 78%);
   height: 100%;
+  font-family: 'roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  
 }
 
 body {
   display: grid;
   place-items: center;
-  font-family: 'roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
+  background-color: rgb(40, 39, 49);
+  background-image: url(images/background-desktop.png);
+  background-position: center;
+  background-size: cover;
 }
 
 main {
-  background: url(images/background.svg);
-  height: 812px;
+  background: url(images/background.svg) no-repeat;
   width: 375px;
+  height: 812px;
 }
 
 .container {
@@ -30,7 +36,7 @@ main {
 }
 
 .avatar {
-  width: 10rem;
+  max-width: 10rem;
   height: 11.5rem;
   margin: 11.5rem auto 0;
   position: relative;
@@ -58,15 +64,15 @@ h1 {
 }
 
 a {
+  color: var(--greya);
+  text-decoration: none;
   height: 1.625rem;
   margin-top: 0.25rem;
-  text-decoration: none;
   font-weight: 400;
   font-size: 1rem;
-  color: var(--greya);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
 }
 
@@ -78,16 +84,50 @@ p {
 }
 
 ul {
-  margin-top: 4rem;
-  padding: 0;
-  list-style: none;
+  margin: 4rem auto 0;
   display: flex;
-  gap: 0.5rem;
   justify-content: center;
-  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
 }
 
 .dowhile img{
   width: 15.625rem;
   margin-top: 8rem;
+}
+
+@media (min-width: 800px) {
+
+  main {
+    width: 22.375rem;
+    height: 33.75rem;
+    background: url(images/rectangle.png);
+  }
+
+  .faixa {
+    background: url(images/faixa.png) no-repeat;
+    background-size: cover;
+    width: 4rem;
+    height: 25vh;
+    position: absolute;
+    bottom: 75vh;
+    z-index: 2;
+  }
+
+  .quebra {
+    background: url(images/quebra.svg);
+    position: absolute;
+    height: 0.5rem;
+    width: 5rem;
+    z-index: 1;
+    bottom: 74.5vh
+  }
+
+  .avatar {
+    margin-top: 4.5rem;
+  }
+
+  ul {
+    margin-top: 2.5rem;
+  }
 }
