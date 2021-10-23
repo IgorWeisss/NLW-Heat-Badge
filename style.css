@@ -91,6 +91,11 @@ ul {
   list-style: none;
 }
 
+ul a:hover {
+  transition: 0.3s;
+  transform: translateY(-8px);
+}
+
 .dowhile img{
   width: 15.625rem;
   margin-top: 8rem;
@@ -102,15 +107,17 @@ ul {
     width: 22.375rem;
     height: 33.75rem;
     background: url(images/rectangle.png);
+    position: absolute;
+    top: 8.75rem;
   }
 
   .faixa {
     background: url(images/faixa.png) no-repeat;
     background-size: cover;
     width: 4rem;
-    height: 25vh;
+    height: 9.875rem;
     position: absolute;
-    bottom: 75vh;
+    top: 0;
     z-index: 2;
   }
 
@@ -120,7 +127,7 @@ ul {
     height: 0.5rem;
     width: 5rem;
     z-index: 1;
-    bottom: 74.5vh
+    top: 9.75rem
   }
 
   .avatar {
