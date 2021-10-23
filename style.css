@@ -17,15 +17,14 @@ body {
   display: grid;
   place-items: center;
   background-color: rgb(40, 39, 49);
-  background-image: url(images/background-desktop.png);
-  background-position: center;
-  background-size: cover;
+  background: url(images/background-desktop.png) no-repeat center/cover;
 }
 
 main {
-  background: url(images/background.svg) no-repeat;
-  width: 375px;
-  height: 812px;
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  height: 100vh;
+  min-height: 812px;
 }
 
 .container {
@@ -101,23 +100,31 @@ ul a:hover {
   margin-top: 8rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 720px) {
+  /*Estilos versão tablet*/
+}
 
+@media (min-width: 960px) {
+/*Estilos versão desktop*/
   main {
     width: 22.375rem;
     height: 33.75rem;
     background: url(images/rectangle.png);
     position: absolute;
     top: 8.75rem;
+    min-height: auto;
   }
 
   .faixa {
     background: url(images/faixa.png) no-repeat;
     background-size: cover;
     width: 4rem;
-    height: 9.875rem;
+    height: 14.875rem;
     position: absolute;
-    top: 0;
+    top: -5rem;
+    left: 0;
+    right: 0;
+    margin: -8.875rem auto 0;
     z-index: 2;
   }
 
@@ -126,6 +133,10 @@ ul a:hover {
     position: absolute;
     height: 0.5rem;
     width: 5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: -8.875rem auto 0;
     z-index: 1;
     top: 9.75rem
   }
